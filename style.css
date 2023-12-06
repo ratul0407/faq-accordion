@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Work";
+  src: url("public/worksans.woff2") format("woff");
+  font-weight: 400, 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Work";
+}
+@layer components {
+  .accordion-question {
+    @apply py-4 relative;
+  }
+  .accordion-panel {
+    @apply text-grayish_purple max-h-0 overflow-hidden transition-all duration-500;
+  }
+  .accordion-trigger {
+    @apply font-bold text-left leading-5 text-dark_purple pr-0 focus:outline-blue-500 flex justify-between gap-4 min-w-full text-lg;
+  }
+}
+.show {
+}
